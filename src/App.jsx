@@ -14,6 +14,10 @@ import ParOuImpar from './components/condicional/ParOuImpar'
 import UsuarioInfo from './components/condicional/UsuarioInfo'
 import DiretaPai from './components/comunicacao/DiretaPai'
 import IndiretaPai from './components/comunicacao/IndiretaPai'
+import Input from './components/formulario/Input'
+import Contador from './components/contador/Contador'
+import Mega from './components/mega/Mega'
+
 
 export default () => (
   <div className='App'>
@@ -21,32 +25,44 @@ export default () => (
 
     <div className="Card_Container">
 
+      <Card titulo='Desafio Mega' color='#F9006E'>
+        <Mega></Mega>
+      </Card>
+
+      <Card titulo='Contador' color='#E74C00'>
+        <Contador numeroInicial={10}></Contador>
+      </Card>
+
+      <Card titulo='Componente Controlado' color='#50457C'>
+        <Input></Input>
+      </Card>
+
       <Card titulo='Comunicação Indireta' color='#20457C'>
-       <IndiretaPai></IndiretaPai>
+        <IndiretaPai></IndiretaPai>
       </Card>
 
       <Card titulo='Comunicação Direta' color='#050505'>
-       <DiretaPai></DiretaPai>
+        <DiretaPai></DiretaPai>
       </Card>
 
       <Card titulo='Renderização Condicional' color='#00D8D9'>
-       <ParOuImpar numero={20} ></ParOuImpar>
-       <UsuarioInfo usuario={{nome: 'Thiago'}} />
+        <ParOuImpar numero={20} ></ParOuImpar>
+        <UsuarioInfo usuario={{ nome: 'Thiago' }} />
       </Card>
 
       <Card titulo='Tabela de Produtos' color='#00D8D9'>
-       <TabelaProdutos></TabelaProdutos>
+        <TabelaProdutos></TabelaProdutos>
       </Card>
 
       <Card titulo='Repetição' color='#00C8F8'>
-       <ListaAlunos></ListaAlunos>
+        <ListaAlunos></ListaAlunos>
       </Card>
 
       <Card titulo='Componente Com Filhos' color='#00C8F8'>
         <Familia sobrenome='Placa'>
           <FamiliaMembro nome='Thiago' />
           <FamiliaMembro nome='Gabriel' />
-          <FamiliaMembro nome='Bruno'/>
+          <FamiliaMembro nome='Bruno' />
 
         </Familia>
       </Card>
